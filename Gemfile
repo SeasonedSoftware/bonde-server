@@ -32,7 +32,6 @@ gem "liquid"
 gem 'acts-as-taggable-on', '~> 4.0'
 gem 'aws-sdk', '~> 2'
 gem 'net-dns'
-gem 'test_after_commit', group: :test
 gem 'whenever', require: false
 gem 'codacy-coverage', require: false
 gem 'codecov', :require => false, :group => :test
@@ -52,9 +51,9 @@ group :test, :development do
   gem 'factory_girl_rails', '~> 4.8'
 end
 
-gem 'test_after_commit', :group => :test
 group :test do
   gem 'webmock', '2.3.1'
   gem "fakeredis", require: "fakeredis/rspec"
   gem 'simplecov', require: false
+  gem 'test_after_commit'
 end
