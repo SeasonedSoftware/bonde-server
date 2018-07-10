@@ -374,6 +374,8 @@ GEM
       rspec-mocks (~> 3.5.0)
       rspec-support (~> 3.5.0)
     rspec-support (3.5.0)
+    rspec_junit_formatter (0.4.1)
+      rspec-core (>= 2, < 4, != 2.12.0)
     rubocop (0.57.2)
       jaro_winkler (~> 1.5.1)
       parallel (~> 1.10)
@@ -468,6 +470,7 @@ DEPENDENCIES
   rmagick
   rspec-activemodel-mocks
   rspec-rails
+  rspec_junit_formatter
   rubocop
   sentry-raven
   shoulda-matchers (< 3.0.0)
