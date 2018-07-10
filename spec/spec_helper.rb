@@ -1,13 +1,10 @@
-require 'codacy-coverage'
 require 'simplecov'
 require 'codecov'
 
-Codacy::Reporter.start
 SimpleCov.start
 
 SimpleCov.formatter = SimpleCov::Formatter::MultiFormatter.new([
   SimpleCov::Formatter::HTMLFormatter,
-  Codacy::Formatter,
   SimpleCov::Formatter::Codecov
 ])
 
@@ -39,7 +36,7 @@ RSpec.configure do |config|
   end
 
   config.after(:suite) do
-    WebMock.disable_net_connect!(allow: %r{https://api.codacy.com/2.0/coverage/})
+    WebMock.disable_net_connect!
   end
 end
 
