@@ -36,7 +36,7 @@ gem 'whenever', require: false
 gem 'codacy-coverage', require: false
 gem 'codecov', :require => false, :group => :test
 gem 'rubocop', require: false
-gem 'rspec_junit_formatter'
+
 
 group :staging, :production do
   gem 'newrelic_rpm', '3.15.0.314'
@@ -57,4 +57,5 @@ group :test do
   gem "fakeredis", require: "fakeredis/rspec"
   gem 'simplecov', require: false
   gem 'test_after_commit'
+  gem 'rspec_junit_formatter'
 end
